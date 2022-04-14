@@ -1,0 +1,23 @@
+<div class="container ">
+  <div class="row ">
+    <div class="col-md-3">
+      <h2>User info</h2>
+      <p><%= image_tag book.user.get_profile_image(100,100) %></p>
+      <table class="table">
+        <tbody>
+          <tr></tr>
+          <tr>
+        	  <th>name</th>
+        	  <th><%= book.user.name %></th>
+          </tr>
+          <tr>
+      	    <th>introduction</th>
+      	    <th><%= book.user.introduction %></th>
+          </tr>
+        </tbody>
+      </table>
+      <button>
+          <%= link_to edit_user_path(user.id) do %>
+          <i class="fas fa-user-cog"></i>
+          <% end %>
+      </button>
